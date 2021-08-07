@@ -1,0 +1,1 @@
+# Detect the pointer and compute the degree, then map the degree to instrument number
