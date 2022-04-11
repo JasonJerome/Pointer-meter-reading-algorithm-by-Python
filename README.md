@@ -10,3 +10,5 @@ Using YoloV3 to detect pointer instruments and reading the number by Hough Trans
    A：小白的记性已经逐渐退化，对于相关的硬核知识已经遗忘的差不多了，但是我和之前同组的同学曾整理过一个文档（主要是围绕平台搭建与模型训练，在此感谢我的好大儿xuyihao同学提供的支持），现已上传至百度网盘（永久有效，欢迎自取）：
    链接：https://pan.baidu.com/s/1aXet4jaNDG4GJMU7TVMAoA 
 提取码：q21l
+4）Q：在文件夹里有好多py，是都有用处吗？
+   A：并不是，除去模型训练用到的一些官方py，其实有很多都是我为了测试编写的，最后使用的py是MeterAutoReader这个，这个py里面实现了yolo检测提取指针式仪表图片和霍夫变换检测直线读取角度（这部分做的并不是很好，因为霍夫检要做很多调参，且检测出的直线很多，结果并不稳定），关于读取角度这部分我推荐可以将起始刻度和结束刻度也纳入yolo检测提取的范畴，通过计算其boudingbox之间的角度来进行计算（可能会比较复杂，但会比较稳定）。
